@@ -2879,29 +2879,41 @@ div.tocify {
 </div>
 
 
-<p>Data Carpentry’s aim is to teach researchers basic concepts, skills, and tools for working with data so that they can get more done in less time, and with less pain. The lessons below were designed for those interested in working with ecology data in R.</p>
-<p>This is an introduction to R designed for participants with no programming experience. These lessons can be taught in a day (~ 6 hours). They start with some basic information about R syntax, the RStudio interface, and move through how to import CSV files, the structure of data frames, how to deal with factors, how to add/remove rows and columns, how to calculate summary statistics from a data frame, and a brief introduction to plotting. The last lesson demonstrates how to work with databases directly from R.</p>
-<div id="chapters" class="section level2">
-<h2>Chapters</h2>
-<ol style="list-style-type: decimal">
-<li><a href="00-before-we-start.html">Before we start</a></li>
-<li><a href="01-intro-to-r.html">Introduction to R</a></li>
-<li><a href="02-starting-with-data.html">Starting with data</a></li>
-<li><a href="03-tidyverse.html">Aggregating and analyzing data with dplyr</a></li>
-<li><a href="04-visualization-ggplot2.html">Data visualization with <strong><code>ggplot2</code></strong></a></li>
-</ol>
+<p><br /> DATE<br />
+Bioinformatics Training Facility</p>
+<p><strong>Instructors:</strong> INSERT INSTRUCTORS HERE</p>
+<p><br /></p>
+<div id="description" class="section level3">
+<h3>Description</h3>
+<p><strong>R</strong> is one of the leading programming languages in <strong>Data Science</strong>. It is widely used to perform statistics, machine learning, visualisations and data analyses. It is an open source programming language so <strong>all the software we will use in the course is free</strong>. This course is an introduction to R <strong>designed for participants with no programming experience</strong>. We will start from scratch by introducing how to start programming in R and progress our way and learn how to read and write to files, manipulate data and visualise it by creating different plots - all the fundamental tasks you need to get you started analysing your data. We will be working in <strong>RStudio</strong> which is a software used to help you develop R code. During the course we will be working with one of the most popular packages in R; <strong>tidyverse</strong>, the umbrella package for <strong>dplyr</strong> and <strong>ggplot2</strong> packages that will allow you to manipulate your data effectively and visualise it to a publication level standard.</p>
+<p><br /></p>
 </div>
-<div id="requirements" class="section level2">
-<h2>Requirements</h2>
-<p>Data Carpentry’s teaching is hands-on, so participants are encouraged to use their own computers to ensure the proper setup of tools for an efficient workflow. <em>These lessons assume no prior knowledge of the skills or tools</em>, but working through this lesson requires working copies of the software described below. To most effectively use these materials, please make sure to download the data and install everything <em>before</em> working through this lesson.</p>
+<div id="target-audience" class="section level3">
+<h3>Target Audience</h3>
+<p>This course is designed for participants with no programming experience.</p>
+<p><br /></p>
+</div>
+<div id="sessions" class="section level3">
+<h3>Sessions</h3>
+<ol style="list-style-type: decimal">
+<li><a href="00-before-we-start.html">Getting started</a></li>
+<li><a href="01-intro-to-r.html">Introduction to R programming</a></li>
+<li><a href="02-starting-with-data.html">Starting with data</a></li>
+<li><a href="03-tidyverse.html">Data manipulation and visualisation in tidyverse</a></li>
+</ol>
+<p><br /></p>
+</div>
 <div id="data" class="section level3">
 <h3>Data</h3>
-<p>Data files for the lesson are available and can be downloaded manually here: <a href="https://doi.org/10.6084/m9.figshare.1314459" class="uri">https://doi.org/10.6084/m9.figshare.1314459</a></p>
+<p>Data is from the paper <a href="http://esapubs.org/archive/ecol/E090/118/">S. K. Morgan Ernest, Thomas J. Valone, and James H. Brown. 2009. Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA. Ecology 90:1708.</a></p>
+<p>A simplified version of this data, suitable for teaching is available here which is the data we will be using in this course: <a href="https://doi.org/10.6084/m9.figshare.1314459" class="uri">https://doi.org/10.6084/m9.figshare.1314459</a></p>
 <p>However, we will download them directly from R during the lessons when we need them.</p>
+<p><br /></p>
 </div>
 <div id="setup-instructions" class="section level3">
 <h3>Setup instructions</h3>
-<p><strong>R</strong> and <strong>RStudio</strong> are separate downloads and installations. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. After installing both programs, you will need to install the <strong><code>tidyverse</code></strong> package from within RStudio. Follow the instructions below for your operating system, and then follow the instructions to install <strong><code>tidyverse</code></strong> and <strong><code>RSQLite</code></strong>.</p>
+<p>All the software required to run this course is installed on your machine, so you do need to do the following sections. In case you are working on this on another machine please follow the instructions below:</p>
+<p><strong>R</strong> and <strong>RStudio</strong> are separate downloads and installations. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. After installing both programs, you will need to install the <strong><code>tidyverse</code></strong> package from within RStudio. Follow the instructions below for your operating system, and then follow the instructions to install the <strong><code>tidyverse</code></strong> package.</p>
 <div id="windows" class="section level4">
 <h4>Windows</h4>
 <div id="if-you-already-have-r-and-rstudio-installed" class="section level5">
@@ -2955,22 +2967,20 @@ div.tocify {
 <li>Once it’s installed, open RStudio to make sure it works and you don’t get any error messages.</li>
 </ul>
 </div>
-<div id="for-everyone" class="section level4">
-<h4>For everyone</h4>
-<p><strong>After installing R and RStudio, you need to install the <code>tidyverse</code> and <code>RSQLite</code> packages.</strong></p>
+<div id="installing-tidyverse" class="section level4">
+<h4>Installing <code>tidyverse</code></h4>
+<p>After installing R and RStudio, you need to install the <code>tidyverse</code> package.</p>
 <ul>
-<li><p>After starting RStudio, at the console type: <code>install.packages(c(&quot;tidyverse&quot;, &quot;RSQLite&quot;))</code></p></li>
+<li><p>After starting RStudio, at the console type: <code>install.packages(&quot;tidyverse&quot;)</code></p></li>
 <li><p>You can also do this by going to Tools -&gt; Install Packages and typing the names of the packages separated by a comma.</p></li>
 </ul>
+<p><br /></p>
 </div>
 </div>
-</div>
-<div id="contributors" class="section level2">
-<h2>Contributors</h2>
-<p>The list of contributors to this lesson is available <a href="http://datacarpentry.org/R-ecology-lesson/CITATION">here</a>.</p>
-<p style="text-align: right; font-size: small;">
-Page built on: &lt;U+0001F4C6&gt; 2019-09-01 &lt;U+2012&gt; &lt;U+0001F562&gt; 22:56:04
-</p>
+<div id="contributors" class="section level3">
+<h3>Contributors</h3>
+<p>This course has been created by Alexia Cardona by adapting and adding new content to the <a href="http://datacarpentry.org/R-ecology-lesson/">Data Carpentry lesson in Ecology</a>:</p>
+<p>Michonneau F, Teal T, Fournier A, Seok B, Obeng A, Pawlik AN, Conrado AC, Woo K, Lijnzaad P, Hart T, White EP, Marwick B, Bolker B, Jordan KL, Ashander J, Dashnow H, Hertweck K, Cuesta SM, Becker EA, Guillou S, Shiklomanov A, Klinges D, Odom GJ, Jean M, Mislan KAS, Johnson K, Jahn N, Mannheimer S, Pederson S, Pletzer A, Fouilloux A, Switzer C, Bahlai C, Li D, Kerchner D, Rodriguez-Sanchez F, Rajeg GPW, Ye H, Tavares H, Leinweber K, Peck K, Lepore ML, Hancock S, Sandmann T, Hodges T, Tirok K, Jean M, Bailey A, von Hardenberg A, Theobold A, Wright A, Basu A, Johnson C, Voter C, Hulshof C, Bouquin D, Quinn D, Vanichkina D, Wilson E, Strauss E, Bledsoe E, Gan E, Fishman D, Boehm F, Daskalova G, Tavares H, Kaupp J, Dunic J, Keane J, Stachelek J, Herr JR, Millar J, Lotterhos K, Cranston K, Direk K, Tylén K, Chatzidimitriou K, Deer L, Tarkowski L, Chiapello M, Burle M, Ankenbrand M, Czapanskiy M, Moreno M, Culshaw-Maurer M, Koontz M, Weisner M, Johnston M, Carchedi N, Burge OR, Harrison P, Humburg P, Pauloo R, Peek R, Elahi R, Cortijo S, sfn_brt, Umashankar S, Goswami S, Sumedh, Yanco S, Webster T, Reiter T, Pearse W, Li Y (2019). “datacarpentry/R-ecology-lesson: Data Carpentry: Data Analysis and Visualization in R for Ecologists, June 2019.” doi: 10.5281/zenodo.3264888, <a href="http://datacarpentry.org/R-ecology-lesson/" class="uri">http://datacarpentry.org/R-ecology-lesson/</a>.</p>
 </div>
 
 
