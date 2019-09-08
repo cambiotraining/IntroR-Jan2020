@@ -5,10 +5,10 @@ toc: hide
 ---
 
 <br/>
-DATE    
+9-10 September 2019   
 Bioinformatics Training Facility
 
-**Instructors:** INSERT INSTRUCTORS HERE
+**Instructors:** Karsten Bach, Alexia Cardona, Hugo Tavares
 
 <br/>
 
@@ -25,7 +25,7 @@ This course is designed for participants with no programming experience.
 
 ### Sessions
 
-1. [Getting started](00-before-we-start.html)
+1. [Getting started](00-getting-started.html)
 2. [Introduction to R programming](01-intro-to-r.html)
 3. [Starting with data](02-starting-with-data.html)
 4. [Data manipulation and visualisation in tidyverse](03-tidyverse.html)
