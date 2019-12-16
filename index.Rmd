@@ -5,10 +5,10 @@ toc: hide
 ---
 
 <br/>
-9-10 September 2019   
+15-16 January 2020   
 Bioinformatics Training Facility
 
-**Instructors:** Karsten Bach, Alexia Cardona, Hugo Tavares
+**Instructors:** Jan Attig, Karsten Bach, Alexia Cardona, Jing Su
 
 <br/>
 
